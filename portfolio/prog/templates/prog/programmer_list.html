@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmer List</title>
+</head>
+<body>
+    <h1>List of Programmers</h1>
+    <ul>
+        {% for programmer in programmers %}
+            <li><a href="{% url 'programmer_detail' programmer.id %}">{{ programmer.user.get_full_name }}</a></li>
+        {% endfor %}    
+    </ul>
+    <a href="{url 'add programmer %'}">Add new Programmer</a>
+</body>
+</html>
